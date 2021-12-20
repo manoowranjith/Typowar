@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typowar</title>
+    <link rel="icon" type="image/x-icon" href="./images/icon.ico">
+    <link rel="stylesheet" href="start.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&display=swap" rel="stylesheet">
+</head>
+<body >
+    <div id="start" class="start-page">
+        <h1>TYPOWAR</h1>
+        <div class="balls">
+            <div class="ball ball-1"></div>
+            <div class="ball ball-2"></div>
+            <div class="ball ball-3"></div>
+            <div class="ball ball-4"></div>
+            <div class="ball ball-5"></div>
+        </div>
+        <div class="start-btn">
+            <button class="btn" onclick="play()">Start<i class="far fa-caret-square-right"></i></button>
+            <div class="how">
+                <button id="myBtn"> <h3>HOW TO PLAY ?</h3></button>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <!-- <img class="arrow" src="./images/arrow.png" alt="" srcset=""> -->
+                <i class="fas fa-info-circle fa-3x"></i>
+                <br>
+                <video id="instruction" width="320" height="240" controls>
+                    <source src="./Typowar.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <h3 id="no-external-key" class="start-enter">PRESS ENTER TO START</h3>
+        <h3 id="external-key" class="start-enter">DO CONNECT KEYBOARD</h3>
+        <!-- <h4 class="start-enter" id="ex-keyboard">Do connect external keyboard</h4> -->
+    </div>
+    <div id="play" class="play-page">
+        <h1>TYPOWAR</h1>
+        <div  class="live-info">
+            <h2 id="live">SCORE : <span id="score">0</span></h2>
+            <div class="lives">
+                <div id="life1" class="life"></div>
+                <div id="life2" class="life"></div>
+                <div id="life3" class="life"></div>
+            </div>
+        </div>
+        <div id="game" class="game-page">
+           <div id="middle" class="target"></div>
+        </div>
+    </div>
+    <div id="game-over">
+        <h1 class="game-status">GAME OVER!</h1>
+        <div id="score-board">
+            <div class="your-score">
+                <h2>YOUR SCORE</h2>
+                <h2 id="score-point"></h2>
+                <button onclick="location.reload()" id="play-again">PLAY<i class="fas fa-redo"></i> </button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+<script src="start.js"></script>
