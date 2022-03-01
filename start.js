@@ -22,18 +22,13 @@ const keyBoard = document.querySelector('body')
 console.log(keyBoard.innerHTML)
 keyBoard.addEventListener('keypress', e =>{
 
-    if(e.keyCode === 13 && start === 0){
+    if(e.key === 13 && start === 0){
         start++;
         play()
         e.preventDefault()
     }
 })
-// function play()
-// {
-  
 
-// }
-// document.getElementById('game').style.display="none"
 function play()
 {
   document.getElementById('start').style.display="none"
@@ -59,7 +54,6 @@ function play()
   var touch=3;
   var score=0;
   document.querySelector("body").addEventListener('keyup', (e) => {
-    var press;
     var flag=0;
     if(e.key!="Enter")
     {
@@ -79,7 +73,6 @@ function play()
       if((flag==1))
       {
         score++
-        press=e.key
         var audio = new Audio('./audios/pop.mp3');
         audio.play();
       }
@@ -119,7 +112,6 @@ function play()
           console.log("Touched")
           document.getElementById("life"+touch.toString()).style.display="none"
           console.log(touch.toString())
-          // touch=0;
           touch--;
 
           if(touch==0)
@@ -141,7 +133,7 @@ function play()
     if(calDistance() == 0)
     {
       return 0;
-    };
+    }
   },0)
   
   function addElements() {         
