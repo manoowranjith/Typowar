@@ -22,7 +22,7 @@ const keyBoard = document.querySelector('body')
 console.log(keyBoard.innerHTML)
 keyBoard.addEventListener('keypress', e =>{
 
-    if(e.key === 13 && start === 0){
+    if(e.key == 13 && start === 0){
         start++;
         play()
         e.preventDefault()
