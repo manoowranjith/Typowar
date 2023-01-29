@@ -272,7 +272,7 @@ h1{
     background-color: rgb(253, 92, 100);
 }
 .game-status{
-  color: white;
+  color: red;
   animation: zoom 1s linear infinite;
 }
 @keyframes zoom {
@@ -347,14 +347,14 @@ p{
     left:50%;
     transform: translate(-50%,-50%);
 }
-#game-over{
+/* #game-over{
     animation: blink 1s linear infinite;
 }
 @keyframes blink {
     50%{
         background-color: red;
     }
-}
+} */
 #score-board{
     margin:5vh 0;
     height:40vh;

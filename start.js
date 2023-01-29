@@ -22,9 +22,9 @@ const keyBoard = document.querySelector('body')
 console.log(keyBoard.innerHTML)
 keyBoard.addEventListener('keypress', e =>{
 
-    if(e.key == 13 && start === 0){
+    if(e.key === 'Enter' && start === 0){
         start++;
-        play()
+        play();
         e.preventDefault()
     }
 })
@@ -33,6 +33,7 @@ function play()
 {
   document.getElementById('start').style.display="none"
   document.getElementById('game-over').style.display="none"
+  document.getElementById('title').style.display="block";
   
   var arr = 'abcdefghijklmnopqrstuvwxyz'.split('');
   var p=0;
@@ -117,7 +118,8 @@ function play()
           if(touch==0)
           {
             document.getElementById('game').style.display="none";
-            document.getElementById('game-over').style.display="block"
+            document.getElementById('game-over').style.display="block";
+            document.getElementById('title').style.display="none";
             document.getElementsByClassName('live-info').innerHTML=""
             document.getElementById('live').style.display="none"
             document.getElementById('score-point').innerText=score;
